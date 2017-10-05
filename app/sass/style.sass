@@ -1,0 +1,432 @@
+// Borscht palette - http://www.colourlovers.com/palette/95413/borscht
+@import "fonts"
+
+@import "vars"
+
+body 
+  background: url(../img/body-bg.jpg) repeat center top
+  font: 16px/27px, Arial, Helvetica, sans-serif
+  color: #303030
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Open Sans', sans-serif
+
+h1
+  font-size: 48px
+
+h3
+  font-size: 36px
+  color: #EC7F2C
+
+h6
+  font-size: 18px
+
+a 
+  color: $color-secondary
+
+img 
+  max-width: 100%
+  height: auto
+
+.soup-item
+  ul 
+    vertical-align: 50%
+
+.section
+  padding: 70px 0
+
+.text-light
+  font-weight: 300
+
+.text-bold
+  font-weight: 700
+
+.img-center
+  margin: 0 auto
+
+.btn-circle
+  box-shadow: 0 -3px 0 3px rgba(255, 255, 255, 0.4)
+  border-radius: 120px 120px 0 0
+
+.btn-circle, .btn-circle:hover, .btn-circle:focus, .btn-circle:active, .btn-circle.active
+  width: 120px
+  height: 60px
+  line-height: 60px
+  background-color: #fff
+
+.btn-linkedin, .btn-linkedin:hover, .btn-linkedin:focus, .btn-linkedin:active, .btn-linkedin.active, .btn-twitter, .btn-twitter:hover, .btn-twitter:focus, .btn-twitter:active, .btn-twitter.active, .btn-fb, .btn-fb:hover, .btn-fb:focus, .btn-fb:active, .btn-fb.active, .btn-main:hover, .btn-main:focus, .btn-main:active, .btn-main.active, .btn-secondary, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .btn-tertiary, .btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active, .btn-tertiary.active, .btn-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .btn-black.active
+  color: #fff
+
+.btn-secondary
+  color: $color-secondary
+  border: 2px solid $color-secondary
+  &:hover, &:focus, &:active, .active
+    background-color: $color-secondary
+
+@import "main-header"
+  
+.btn-light, .btn-light:hover, .btn-light:active, .btn-light.active
+  color: #141414
+
+.btn-light:hover, .btn-light:active, .btn-light.active
+  background-color: #f4f4f4
+
+.order-info
+  margin-bottom: 0
+  margin-top: 50px
+  li
+    color: $color-orange
+    .btn-light
+        padding: 5px 20px
+        background-color: #FFFFFF
+  li.lead 
+    margin-bottom: 0
+    font-size: 24px
+    font-weight: bold
+  li.lead
+    .fa 
+      vertical-align: middle
+
+.search-area
+  padding-top: 130px
+  padding-bottom: 170px
+  background-image: url(../img/section-bg3-dark.jpg)
+  
+  h2
+    margin-bottom: 50px
+    color: #FFFFFF
+    font-size: 42px
+    text-transform: uppercase
+
+.parallax
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+
+.welcome
+  border-top: 2px solid $color-red
+
+.welcome, .food-menu, .guide, .contacts, .hotel, .bath, .servises, .lunch, .specialty, .banquet, .soup, .dessert
+  background: url(../img/pattern-1.png) repeat-x scroll 0 0
+  padding-top: 100px
+  .container
+    background-color: #fff
+    border-radius: 15px
+    p 
+      font-size: 16px
+      line-height: 1.6
+      margin: 20px 0
+
+.welcome-img 
+  margin-top: 37px
+
+.welcome-img, .menu-img, .guide-img, .hotel-img, .contact-page-map>iframe, .price
+  border-radius: 5px
+
+.welcome-box
+  padding: 10px 30px 30px
+  color: #787878
+  background-color: #FFF
+  h1
+    margin-bottom: 25px
+    color: $color-secondary
+  .btn-secondary
+    margin-top: 15px
+    padding: 12px 24px
+
+// Breadcrumbs
+
+.breadcrumb
+  background-color: #fff
+  padding: 15px 0
+  margin-bottom: 0 
+  border-bottom: 1px dotted #ccc
+  border-radius: 15px 15px 0 0
+  .container
+    border-radius: 0
+    padding: 0 37px
+    ul 
+      margin-bottom: 0
+      li
+        a 
+          color: #222
+      li + li
+        &::before
+          font-family: 'FontAwesome'
+          content: "\f101"
+          padding-right: 10px
+          color: #222
+      .active
+        color: $color-red
+
+.food-menu-grid
+  margin-top: 60px
+  .hover-content
+    margin: 15px 0
+    overflow: hidden 
+    position: relative
+    &:hover 
+      img
+        transform: rotate(5deg) scale(1.3)
+      .overlay 
+        transform: rgba(0, 0, 0, 0.6)
+    .overlay
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      height: 100%
+      background: rgba(0, 0, 0, 0.4)
+      color: #fff
+      opacity: 1
+.special-offers
+  background-image: url(../img/section-bg1.jpg)
+  h1
+    margin-bottom: 20px
+    color: #fff      
+
+.offer-col
+  .content
+    padding: 0 20px 15px
+    h4
+      margin-bottom: 15px
+    .coupon-code
+      margin-top: 20px
+      color: $color-secondary
+
+.owl-item
+  width: 285px
+
+
+.no-margin-top
+  margin-top: 0
+
+.offer-col
+  margin: 25px 15px 0
+  background-color: #fff
+  .img-responsive
+    border-radius: 5px 5px 0 0
+  .btn-circle
+    margin-top: -40px
+    font-size: 15px
+
+.main-footer
+  padding-top: 55px
+  background-color: #181818
+  color: #ffffff
+  a 
+    color: #ffffff
+
+.page-links
+  margin: 14px 0 0
+  li
+    padding: 0 10px
+    font-size: 18px
+
+.sm-links li .fa, .foot-address li
+  font-size: 18px
+
+.animation
+  transition: all 0.5s ease 0s
+  a
+    transition: all 0.5s ease 0s
+
+.hotels-list .right-col .btn-secondary, .hotels-list-grid .grid-box-info .btn-secondary, .food-menu-grid .hover-content, .offer-col
+  border-radius: 5px
+
+// Menu Page
+
+.section-head, .section-head-content
+  padding: 30px 30px 0
+
+.food-menu-item, .guide-item, .lunch-item, .specialty-item, .banquet-item, .soup-item
+  margin: 20px 0
+  padding: 20px
+  background-color: #fff
+  p 
+    font-size: 16px
+    line-height: 1.6
+    margin: 20px 0
+
+.menu-box,
+  .price
+    font-size: 2.5rem
+    color: #fff
+    font-family: Open Sans, sans-serif
+    background-color: $color-orange
+    padding: 0 0 0 20px
+
+.guide-box
+  div 
+    .value
+      display: table-cell
+      width: 1%
+
+.menu-box, .guide-box, .specialty-box, .banquet-box
+  a
+    margin: 20px 0 0
+
+// Specialty
+
+.specialty-box
+  h3 
+    span
+      font-size: 18px
+
+
+// Bath
+
+.gallery
+  margin: 30px 0
+  .item
+  a 
+    display: inline-block
+    width: 350px
+    img 
+      max-width: 100%
+
+.menu-box, .soup-box, 
+  ul 
+    padding: 0
+    margin-top: 20px
+    li 
+      list-style: none
+      position: relative
+      border-bottom: 1px dotted #ccc
+      margin-top: 6px
+    p 
+      display: table-cell
+    .name
+      span
+        background: #fff
+        padding-right: 15px
+    .value
+      width: 5%
+      padding-left: 15px
+      background: #fff
+
+.divider
+  margin-bottom: 30px
+
+// Contacts
+
+.contacts
+  .google-map-section
+    height: 440px
+    position: relative
+    background-color: rgb(229, 227, 223)
+    overflow: hidden
+    .gm-style
+      position: absolute
+      left: 0
+      top: 0
+      overflow: hidden
+      width: 100%
+      height: 100%
+      z-index: 0
+    iframe
+      width: 100%
+  .fa 
+    color: $color-red
+    font-size: 24px
+    vertical-align: text-top
+  h6
+
+.contacts-adress-section,
+.contacts-phone-section,
+.contacts-mail-section
+  margin: 40px 0 
+  ul
+    padding: 0
+    li 
+      list-style: none
+      font-size: 22px
+      padding: 0
+      margin: 0 0 10px
+
+// Dessert Popup
+
+.dessert-item
+  margin-bottom: 30px
+
+.gallery-overlay
+  position: relative
+  margin: 0
+  img 
+    display: block
+    height: auto
+    width: 100%
+  figcaption
+    background: rgba(0, 0, 0, .8)
+    position: absolute
+    text-align: center
+    padding: 0
+    bottom: 0
+    right: 0
+    left: 0
+    top: 0
+    opacity: 0
+    transition: all 0.2s ease-in-out
+  a 
+    position: absolute
+    text-indent: 200%
+    font-size: 0
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+    opacity: 0
+    z-index: 10
+  .caption-inner
+    position: absolute
+    margin-top: -25px
+    width: 100%
+    top: 50%
+    left: 0
+
+.overlay-icon
+  border: 2px solid #fff
+  line-height: 48px
+  font-size: 16px
+  margin: 0 auto
+  height: 50px
+  width: 50px
+  color: #fff
+  border-radius: 50px
+  .fa-search
+    color: #F5D76E
+    transition: all 0.2s ease-in-out
+
+.gallery-overlay
+  &:hover
+    figcaption
+      opacity: 1
+
+.icon-magnifier
+  &::before
+    content: "\e090"
+
+
+// Magnific Popup
+
+
+.mfp-fade
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.5s ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      transform: scale(0) rotate(90deg)
+      transition: all 0.5s ease-out
+    &.mfp-ready .mfp-content
+      opacity: 1
+      transform: scale(1) rotate(0deg)
+    &.mfp-removing .mfp-content
+      opacity: 0
