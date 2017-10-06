@@ -48,7 +48,7 @@ gulp.task('pug', function() {
         .on("error", notify.onError(function(error) {
             return "Message to the notifier: " + error.message;
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('app'));
 });
 
 gulp.task('imagemin', function() {
