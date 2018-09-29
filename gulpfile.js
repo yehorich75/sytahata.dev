@@ -1,3 +1,4 @@
+'use strict'
 var gulp = require('gulp'),
     bourbon = require('node-bourbon'),
     pug = require('gulp-pug'),
@@ -10,12 +11,12 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-    uglify = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
+    uglify = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
     cleanCSS = require('gulp-clean-css'),
     cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     htmlmin = require('gulp-html-minifier'),
-    rename = require('gulp-rename'); // Подключаем библиотеку для переименования файлов
-    cache = require('gulp-cache'); // Подключаем библиотеку кеширования
+    rename = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
+    cache = require('gulp-cache'), // Подключаем библиотеку кеширования
     browserSync = require('browser-sync'); // Подключаем Browser Sync;
 
 // gulp.task('buildhtml', function() {
@@ -28,10 +29,9 @@ var gulp = require('gulp'),
 // });
 
 gulp.task('sass', function(){ // Создаем таск Sass
-    return gulp.src('app/sass/style.sass') // Берем источник
-        .pipe(sass({
-            includePaths: require('node-bourbon').includePaths
-            })) // Преобразуем Sass в CSS посредством gulp-sass
+    return gulp.src('app/sass/**/*.sass') // Берем источник
+        .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError())) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(rename({suffix: '.min', prefix : ''}))
         .pipe(autoprefixer(['last 15 versions']))// Автопрефиксер
         // .pipe(cleanCSS())
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
@@ -69,12 +69,12 @@ gulp.task('css-libs', ['sass'], function() {
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
-// gulp.task('minify', function() {
-// gulp.src('app/**/*.html')
-//    .pipe(htmlmin({collapseWhitespace: true}))
-//    .pipe(gulp.dest('dist/html'))
-//    .pipe(browserSync.reload({stream: true})) // Обновляем HTML на странице при изменении
-// });
+gulp.task('minify', function() {
+gulp.src('app/**/*.html')
+   .pipe(htmlmin({collapseWhitespace: true}))
+   .pipe(gulp.dest('dist/html'))
+   .pipe(browserSync.reload({stream: true})) // Обновляем HTML на странице при изменении
+});
 
 
  gulp.task('scripts', function() {
